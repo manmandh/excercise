@@ -90,7 +90,7 @@ public class User implements IUser {
     @Override
     public void getMoneyFromBank() {
         if(this.money >= 50000) {
-            System.out.println("Nhập số tiền cần rút: ");
+            System.out.println("Enter money you need withdraw: ");
             System.out.println("| 1 - 50.000");
             System.out.println("| 2 - 100.000");
             System.out.println("| 3 - 100.000");
@@ -108,7 +108,7 @@ public class User implements IUser {
                     case 4 -> moneyGet = 500000;
                     case 5 -> moneyGet = 1000000;
                     default -> {
-                        System.out.println("Chọn không hợp lệ!");
+                        System.out.println("Invalid!");
                         moneyGet = 0;
                     }
                 }
@@ -119,27 +119,27 @@ public class User implements IUser {
                 }
             }
         }
-        System.out.println("Số dư còn lại: " + this.money);
+        System.out.println("Balance " + this.money);
     }
 
     @Override
     public void checkMoney() {
-        System.out.println("Số dư của bạn là: " + this.money);
+        System.out.println("Balance is: " + this.money);
     }
 
     public void checkCloseness(long money) {
         if (money > 10000000) {
-            System.out.println("Bạn là khách hàng thân thiết!");
+            System.out.println("Membership?");
             setCloseness(true);
         } else {
-            System.out.println("Bạn không là khách hàng thân thiết");
+            System.out.println("Not membership?");
             setCloseness(false);
         }
     }
 
     @Override
     public String toString() {
-        return "Tên: " + this.name + "\n" + "Địa chỉ: " + this.address + "\n" + "Số dư: " + this.money;
+        return "Name: " + this.name + "\n" + "Adress: " + this.address + "\n" + "Balance: " + this.money;
     }
 
     public String getIdBank() {
