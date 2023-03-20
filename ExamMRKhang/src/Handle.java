@@ -34,7 +34,7 @@ public class Handle {
                     System.out.println("Address : " + user.getAddress());
                     System.out.println("Account number : " + user.getNumberAccount());
                     System.out.println("Check account???");
-                    System.out.print("Xác nhận tài khoản(1: phải || 0: không): ");
+                    System.out.print("Confirm account): ");
                     while (true) {
                         try {
                             int choice = Integer.parseInt(scanner.nextLine());
